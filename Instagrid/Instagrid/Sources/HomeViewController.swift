@@ -6,4 +6,9 @@
 //  Copyright © 2019 axelleydier. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class HomeViewController: UIViewController {
+
+    
+}
