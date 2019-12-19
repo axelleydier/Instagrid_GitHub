@@ -10,7 +10,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdGrid" customModule="Instagrid" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomLeftButton" destination="9Bd-pn-SI4" id="wsP-Gi-OAi"/>
+                <outlet property="bottomLeftView" destination="nrp-0r-yG7" id="FhH-f8-DEk"/>
+                <outlet property="bottomRightButton" destination="0tT-eP-cz2" id="1JX-s2-Nrt"/>
+                <outlet property="bottomRightView" destination="AN8-vV-Qbu" id="kPd-sz-4VX"/>
+                <outlet property="contentView" destination="ajn-8U-gx1" id="dmW-q6-7YS"/>
+                <outlet property="topLeftButton" destination="DGD-Hw-A9n" id="udX-ti-cu3"/>
+                <outlet property="topLeftView" destination="obg-aF-LhL" id="Ve4-cE-7Ey"/>
+                <outlet property="topRightButton" destination="lxF-uG-zp1" id="Czf-4o-Etc"/>
+                <outlet property="topRightView" destination="aiE-Rz-DID" id="KMI-Rp-tA3"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="ajn-8U-gx1" userLabel="Content View">
             <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
@@ -28,6 +40,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGD-Hw-A9n">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
+                                            <connections>
+                                                <action selector="selectedSpot:" destination="-1" eventType="touchUpInside" id="UPF-Et-3KY"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,6 +60,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-uG-zp1">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
+                                            <connections>
+                                                <action selector="selectedSpot:" destination="-1" eventType="touchUpInside" id="yUL-qo-axz"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,6 +75,11 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="XqO-Ne-oXP"/>
+                                <constraint firstAttribute="width" secondItem="Pdk-90-P3I" secondAttribute="height" multiplier="234:113" id="fcf-dG-6WM"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="rzc-bv-vRP"/>
+                            </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-AX-q5f">
                             <rect key="frame" x="0.0" y="242" width="468" height="226"/>
@@ -67,6 +90,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bd-pn-SI4">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
+                                            <connections>
+                                                <action selector="selectedSpot:" destination="-1" eventType="touchUpInside" id="3UL-Sn-6TD"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,6 +110,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tT-eP-cz2">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
+                                            <connections>
+                                                <action selector="selectedSpot:" destination="-1" eventType="touchUpInside" id="7Ul-xv-lxb"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,8 +125,15 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="fhx-AX-q5f" secondAttribute="height" multiplier="234:113" id="fiU-za-g8U"/>
+                            </constraints>
                         </stackView>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="fhx-AX-q5f" firstAttribute="height" secondItem="Pdk-90-P3I" secondAttribute="height" id="R9w-zi-e7W"/>
+                        <constraint firstItem="fhx-AX-q5f" firstAttribute="width" secondItem="Pdk-90-P3I" secondAttribute="width" id="olh-xX-XZl"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.083267621700000002" green="0.39813476800000003" blue="0.61179143189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
