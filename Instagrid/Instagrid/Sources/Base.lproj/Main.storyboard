@@ -39,13 +39,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HQm-3P-jLg">
                                         <rect key="frame" x="39" y="0.0" width="185" height="117.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="^" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJt-AT-juP" userLabel="Direction Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="^" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJt-AT-juP" userLabel="Direction Label">
                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="76"/>
                                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py3-aG-zzB" userLabel="Swipe Direction Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py3-aG-zzB" userLabel="Swipe Direction Label">
                                                 <rect key="frame" x="0.0" y="84" width="185" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,9 +60,7 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ihk-k3-OSe" secondAttribute="height" multiplier="1:1" id="Os5-Eo-mVf"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="bYa-DW-cZ2">
-                                                <variation key="heightClass=compact" constant="150"/>
-                                            </constraint>
+                                            <constraint firstAttribute="width" constant="263" id="f11-i6-DzT"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="b4q-oP-2j3">
@@ -108,7 +106,24 @@
                                         <variation key="heightClass=compact" axis="vertical"/>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HQm-3P-jLg" secondAttribute="trailing" constant="39" id="C6k-co-Kby"/>
+                                    <constraint firstItem="Ihk-k3-OSe" firstAttribute="leading" secondItem="HQm-3P-jLg" secondAttribute="trailing" constant="62" id="Jiu-VV-F9K"/>
+                                    <constraint firstItem="HQm-3P-jLg" firstAttribute="leading" secondItem="gx7-Ks-g9x" secondAttribute="leading" constant="39" id="aOH-Zn-ZYa"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jiu-VV-F9K"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="C6k-co-Kby"/>
+                                        <exclude reference="aOH-Zn-ZYa"/>
+                                        <include reference="Jiu-VV-F9K"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.69411764710000001" green="0.84705882349999995" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
