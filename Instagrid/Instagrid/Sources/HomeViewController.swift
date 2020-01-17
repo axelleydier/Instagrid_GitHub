@@ -24,6 +24,11 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var firstGridButton: UIButton!
     @IBOutlet private weak var secondGridButton: UIButton!
     @IBOutlet private weak var thirdGridButton: UIButton!
+
+    private let image = UIImage(named: "Selected")!
+    private let imageGrid1 = UIImage(named: "Layout 1")!
+    private let imageGrid2 = UIImage(named: "Layout 2")!
+    private let imageGrid3 = UIImage(named: "Layout 3")!
     
     private lazy var leftSwipeGestureRecognizer: UISwipeGestureRecognizer = {
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(executeSwipeAction(_:)))
@@ -111,12 +116,15 @@ final class HomeViewController: UIViewController {
             case .firstGrid:
                 let grid = FirstGrid()
                 self.configureContainer(for: grid)
+                self.firstGridButton.setImage(self.image, for: UIControl.State.normal)
             case .secondGrid:
                 let grid2 = SecondGrid()
                 self.configureContainer(for: grid2)
+                self.secondGridButton.setImage(self.image, for: UIControl.State.normal)
             case .thirdGrid:
                 let grid3 = ThirdGrid()
                 self.configureContainer(for: grid3)
+                self.thirdGridButton.setImage(self.image, for: UIControl.State.normal)
             }
         }
     }
@@ -139,23 +147,34 @@ final class HomeViewController: UIViewController {
             view1.rightAnchor.constraint(equalTo: view2.rightAnchor)
         ])
     }
+    
+
     @IBAction func didPressFirstGridButton(_ sender: UIButton) {
         viewModel.didPressFirstGrid()
+        firstGridButton.setImage(image, for: UIControl.State.normal)
+        secondGridButton.setImage(imageGrid2, for: UIControl.State.normal)
+        thirdGridButton.setImage(imageGrid3, for: UIControl.State.normal)
     }
     
     @IBAction func didPressSecondGridButton(_ sender: UIButton) {
         viewModel.didPressSecondGrid()
+        secondGridButton.setImage(image, for: UIControl.State.normal)
+        firstGridButton.setImage(imageGrid1, for: UIControl.State.normal)
+        thirdGridButton.setImage(imageGrid3, for: UIControl.State.normal)
     }
     
     @IBAction func didPressThirdGridButton(_ sender: UIButton) {
         viewModel.didPressThirdGrid()
+        thirdGridButton.setImage(image, for: UIControl.State.normal)
+        firstGridButton.setImage(imageGrid1, for: UIControl.State.normal)
+        secondGridButton.setImage(imageGrid2, for: UIControl.State.normal)
     }
     
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         contentView.gestureRecognizers?.removeAll()
-        if traitCollection.horizontalSizeClass == .compact {
+        if traitCollection.horizontalSizeClass == .compact, UIDevice.current.orientation == .portrait {
             contentView.addGestureRecognizer(upSwipeGestureRecognizer)
             viewModel.didChangeToCompact()
         } else {
