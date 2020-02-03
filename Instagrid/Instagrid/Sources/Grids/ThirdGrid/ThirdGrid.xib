@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +35,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obg-aF-LhL">
                                     <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGD-Hw-A9n">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGD-Hw-A9n">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
                                             <connections>
@@ -52,12 +50,13 @@
                                         <constraint firstAttribute="width" secondItem="obg-aF-LhL" secondAttribute="height" multiplier="1:1" id="Uu4-eX-pN1"/>
                                         <constraint firstItem="DGD-Hw-A9n" firstAttribute="top" secondItem="obg-aF-LhL" secondAttribute="top" id="cDM-sE-a8w"/>
                                         <constraint firstAttribute="bottom" secondItem="DGD-Hw-A9n" secondAttribute="bottom" id="eeB-kU-z2r"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="lYK-zJ-G7h"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiE-Rz-DID">
                                     <rect key="frame" x="242" y="0.0" width="226" height="226"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-uG-zp1">
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-uG-zp1">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
                                             <connections>
@@ -71,13 +70,13 @@
                                         <constraint firstAttribute="width" secondItem="aiE-Rz-DID" secondAttribute="height" multiplier="1:1" id="Of8-iv-b9f"/>
                                         <constraint firstAttribute="bottom" secondItem="lxF-uG-zp1" secondAttribute="bottom" id="OkP-Vo-Ke0"/>
                                         <constraint firstItem="lxF-uG-zp1" firstAttribute="top" secondItem="aiE-Rz-DID" secondAttribute="top" id="euN-4h-hOC"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="u30-gS-IGE"/>
                                         <constraint firstItem="lxF-uG-zp1" firstAttribute="leading" secondItem="aiE-Rz-DID" secondAttribute="leading" id="v6o-11-ea7"/>
                                     </constraints>
                                 </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="XqO-Ne-oXP"/>
-                                <constraint firstAttribute="width" secondItem="Pdk-90-P3I" secondAttribute="height" multiplier="234:113" id="fcf-dG-6WM"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="rzc-bv-vRP"/>
                             </constraints>
                         </stackView>
@@ -87,7 +86,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrp-0r-yG7">
                                     <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bd-pn-SI4">
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bd-pn-SI4">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
                                             <connections>
@@ -102,12 +101,13 @@
                                         <constraint firstItem="9Bd-pn-SI4" firstAttribute="leading" secondItem="nrp-0r-yG7" secondAttribute="leading" id="Ptz-aV-wrm"/>
                                         <constraint firstItem="9Bd-pn-SI4" firstAttribute="top" secondItem="nrp-0r-yG7" secondAttribute="top" id="RJ6-qV-kf2"/>
                                         <constraint firstAttribute="width" secondItem="nrp-0r-yG7" secondAttribute="height" multiplier="1:1" id="UPB-Hv-Fyu"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="fOq-3E-paZ"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AN8-vV-Qbu">
                                     <rect key="frame" x="242" y="0.0" width="226" height="226"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tT-eP-cz2">
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tT-eP-cz2">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
                                             <connections>
@@ -121,19 +121,17 @@
                                         <constraint firstAttribute="trailing" secondItem="0tT-eP-cz2" secondAttribute="trailing" id="6ra-eR-2rW"/>
                                         <constraint firstAttribute="width" secondItem="AN8-vV-Qbu" secondAttribute="height" multiplier="1:1" id="JIy-Ed-LN2"/>
                                         <constraint firstAttribute="bottom" secondItem="0tT-eP-cz2" secondAttribute="bottom" id="MRi-Hi-JdA"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Mky-uj-cBT"/>
                                         <constraint firstItem="0tT-eP-cz2" firstAttribute="leading" secondItem="AN8-vV-Qbu" secondAttribute="leading" id="wyK-3J-0Tn"/>
                                     </constraints>
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="fhx-AX-q5f" secondAttribute="height" multiplier="234:113" id="fiU-za-g8U"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="6pa-ln-cQy"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="qoI-ty-iDg"/>
                             </constraints>
                         </stackView>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="fhx-AX-q5f" firstAttribute="height" secondItem="Pdk-90-P3I" secondAttribute="height" id="R9w-zi-e7W"/>
-                        <constraint firstItem="fhx-AX-q5f" firstAttribute="width" secondItem="Pdk-90-P3I" secondAttribute="width" id="olh-xX-XZl"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.083267621700000002" green="0.39813476800000003" blue="0.61179143189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -16,6 +16,13 @@ final class HomeViewModel {
         case thirdGrid
     }
     
+    private var currentConfiguration: GridConfiguration? = nil {
+        didSet {
+            guard let currentConfiguration = currentConfiguration else { return }
+            selectedConfiguration?(currentConfiguration)
+        }
+    }
+
     // MARK: - Outputs
 
     var titleText: ((String) -> Void)?
@@ -32,20 +39,19 @@ final class HomeViewModel {
         titleText?("Instagrid")
         directionText?("^")
         swipeText?("Swipe up to share")
-        selectedConfiguration?(.firstGrid)
+        currentConfiguration = .firstGrid
     }
 
     func didPressFirstGrid() {
-        selectedConfiguration?(.firstGrid)
-        
+        currentConfiguration = .firstGrid
     }
     
     func didPressSecondGrid() {
-        selectedConfiguration?(.secondGrid)
+        currentConfiguration = .secondGrid
     }
     
     func didPressThirdGrid() {
-        selectedConfiguration?(.thirdGrid)
+        currentConfiguration = .thirdGrid
     }
 
     func didChangeToCompact() {
@@ -56,5 +62,10 @@ final class HomeViewModel {
     func didChangeToRegular() {
         directionText?("<")
         swipeText?("Swipe left to share")
+    }
+
+    func didResetGrid() {
+        guard let currentConfiguration = currentConfiguration else { return }
+        selectedConfiguration?(currentConfiguration)
     }
 }

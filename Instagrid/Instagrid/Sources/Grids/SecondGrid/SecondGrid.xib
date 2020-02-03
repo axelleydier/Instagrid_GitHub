@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +33,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-Ov-edu">
                                     <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fI6-3A-7YU">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fI6-3A-7YU">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
                                             <connections>
@@ -55,7 +53,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yn6-5a-a0r">
                                     <rect key="frame" x="242" y="0.0" width="226" height="226"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3j-aS-4WZ">
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3j-aS-4WZ">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="226"/>
                                             <state key="normal" image="Plus"/>
                                             <connections>
@@ -73,11 +71,15 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="OwN-Pb-OWO"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="k69-Qd-UiF"/>
+                            </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGQ-hK-0PW">
                             <rect key="frame" x="0.0" y="242" width="468" height="226"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je4-oE-7fK">
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je4-oE-7fK">
                                     <rect key="frame" x="0.0" y="0.0" width="468" height="226"/>
                                     <state key="normal" image="Plus"/>
                                     <connections>
@@ -87,6 +89,8 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3cU-vF-qnH"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="8E7-Jt-aPM"/>
                                 <constraint firstItem="Je4-oE-7fK" firstAttribute="leading" secondItem="VGQ-hK-0PW" secondAttribute="leading" id="8ta-fj-8WL"/>
                                 <constraint firstAttribute="bottom" secondItem="Je4-oE-7fK" secondAttribute="bottom" id="dRx-Is-cNs"/>
                                 <constraint firstItem="Je4-oE-7fK" firstAttribute="top" secondItem="VGQ-hK-0PW" secondAttribute="top" id="m4w-if-EfU"/>

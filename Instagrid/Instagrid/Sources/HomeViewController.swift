@@ -53,6 +53,10 @@ final class HomeViewController: UIViewController {
         })
     }
     
+    private func resetGrid() {
+        viewModel.didResetGrid()
+    }
+    
     func sharePicture() {
         UIGraphicsBeginImageContext(contentView.frame.size)
         guard let context = UIGraphicsGetCurrentContext() else { return }
@@ -63,7 +67,7 @@ final class HomeViewController: UIViewController {
         let activityViewController = UIActivityViewController(activityItems: [_image], applicationActivities: nil)
         activityViewController.completionWithItemsHandler = {_, isDismissed, _, _ in
             if isDismissed {
-                print("Coucou Axel")
+                self.resetGrid()
             }
         }
         
@@ -95,6 +99,11 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         bind(to: viewModel)
         viewModel.viewDidLoad()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configureGestures()
     }
     
     private func bind(to viewModel: HomeViewModel) {
@@ -173,6 +182,10 @@ final class HomeViewController: UIViewController {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
+        configureGestures()
+    }
+
+    private func configureGestures() {
         contentView.gestureRecognizers?.removeAll()
         if traitCollection.horizontalSizeClass == .compact, UIDevice.current.orientation == .portrait {
             contentView.addGestureRecognizer(upSwipeGestureRecognizer)

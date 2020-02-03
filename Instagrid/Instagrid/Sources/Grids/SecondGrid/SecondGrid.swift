@@ -14,10 +14,10 @@ final class SecondGrid: UIView, GridType {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var topLeftButton: UIButton!
-    @IBOutlet weak var topRightButton: UIButton!
-    @IBOutlet weak var bottomButton: UIButton!
     @IBOutlet weak var topLeftView: UIView!
+    @IBOutlet weak var topRightButton: UIButton!
     @IBOutlet weak var topRightView: UIView!
+    @IBOutlet weak var bottomButton: UIButton!
     @IBOutlet weak var bottomView: UIView!
     
     // MARK: - Private properties
@@ -43,6 +43,7 @@ final class SecondGrid: UIView, GridType {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
+    
     func configure(with viewModel: GridViewModel, delegate: GridDelegate) {
         self.viewModel = viewModel
         self.delegate = delegate

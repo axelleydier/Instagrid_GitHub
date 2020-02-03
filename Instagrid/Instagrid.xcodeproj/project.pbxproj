@@ -238,6 +238,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		1D376B57231036DC00E7EA54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -380,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.axelleydier.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -398,7 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.axelleydier.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

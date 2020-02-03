@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,6 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="PKB-Sb-OyF"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Sar-pH-WSf"/>
                                 <constraint firstAttribute="bottom" secondItem="pDh-tJ-YyP" secondAttribute="bottom" id="VJe-cM-6EX"/>
                                 <constraint firstItem="pDh-tJ-YyP" firstAttribute="leading" secondItem="fEN-VT-fGE" secondAttribute="leading" id="ZBG-Ys-ZH8"/>
@@ -64,7 +63,6 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="oWP-cq-oGD" secondAttribute="height" multiplier="1:1" id="4Sv-ae-cOa"/>
                                         <constraint firstItem="m3G-1f-gY2" firstAttribute="top" secondItem="oWP-cq-oGD" secondAttribute="top" id="EBm-vB-Szb"/>
                                         <constraint firstItem="m3G-1f-gY2" firstAttribute="leading" secondItem="oWP-cq-oGD" secondAttribute="leading" id="Kga-Pg-ld0"/>
                                         <constraint firstAttribute="bottom" secondItem="m3G-1f-gY2" secondAttribute="bottom" id="Ypx-Rz-0df"/>
@@ -87,7 +85,6 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="6BW-Tm-vfd" secondAttribute="trailing" id="AqT-KN-nnl"/>
                                         <constraint firstItem="6BW-Tm-vfd" firstAttribute="top" secondItem="X4P-Wv-h00" secondAttribute="top" id="Ns6-ic-LQh"/>
-                                        <constraint firstAttribute="width" secondItem="X4P-Wv-h00" secondAttribute="height" multiplier="1:1" id="ZTb-OO-UbG"/>
                                         <constraint firstItem="6BW-Tm-vfd" firstAttribute="leading" secondItem="X4P-Wv-h00" secondAttribute="leading" id="e6g-ti-Clu"/>
                                         <constraint firstAttribute="width" secondItem="X4P-Wv-h00" secondAttribute="height" multiplier="1:1" id="geb-hT-DJE"/>
                                         <constraint firstAttribute="bottom" secondItem="6BW-Tm-vfd" secondAttribute="bottom" id="xAd-js-dEx"/>
@@ -104,10 +101,10 @@
             </subviews>
             <color key="backgroundColor" red="0.083267621700000002" green="0.39813476800000003" blue="0.61179143189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="hOl-k9-Ppc" secondAttribute="bottom" constant="16" id="ICv-tL-qe5"/>
-                <constraint firstItem="hOl-k9-Ppc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="oKX-yC-Cq9" secondAttribute="leading" constant="16" id="Mko-HU-RZI"/>
-                <constraint firstItem="hOl-k9-Ppc" firstAttribute="top" relation="lessThanOrEqual" secondItem="oKX-yC-Cq9" secondAttribute="top" constant="16" id="WUf-qM-ygR"/>
-                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hOl-k9-Ppc" secondAttribute="trailing" constant="16" id="j03-k6-jqh"/>
+                <constraint firstAttribute="bottom" secondItem="hOl-k9-Ppc" secondAttribute="bottom" constant="16" id="ICv-tL-qe5"/>
+                <constraint firstItem="hOl-k9-Ppc" firstAttribute="leading" secondItem="oKX-yC-Cq9" secondAttribute="leading" constant="16" id="Mko-HU-RZI"/>
+                <constraint firstItem="hOl-k9-Ppc" firstAttribute="top" secondItem="oKX-yC-Cq9" secondAttribute="top" constant="16" id="WUf-qM-ygR"/>
+                <constraint firstAttribute="trailing" secondItem="hOl-k9-Ppc" secondAttribute="trailing" constant="16" id="j03-k6-jqh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="qvf-Rg-mz2"/>
